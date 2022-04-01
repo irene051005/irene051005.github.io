@@ -1,0 +1,139 @@
+body {
+	background-color: #242424;
+	color: white;
+}
+
+/*Ссылки подсвечивается выбранным цветом.*/
+.links {
+	color: white;
+	text-decoration: none;
+	font-size: 24pt;
+	font-family: 'Lato';
+}
+
+.links:hover {
+	color: #FFBA00;
+}
+
+#main_link:hover {
+	color: white;
+}
+
+/*Кнопки с реверсным изменением цветов по наведению*/
+.reversion {
+	background-color: #FFBA00;
+	border: 4px solid white;
+}
+
+.reversion:hover {
+	color: #FFBA00;
+	background-color: white;
+	border-color: #FFBA00;
+}
+
+/*Группы*/
+#group1 {
+	width: 1440px;
+	height: 960px;
+	position: relative;
+	background-image: url(img/bg1.png);
+}
+
+#group2 {
+	width: 1440px;
+	height: 610px;
+	position: relative;
+}
+
+#group3 {
+	width: 1440px;
+	height: 375px;
+	position: relative;
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#group4 {
+	width: 1440px;
+	height: 1202px;
+	position: relative;
+	background: linear-gradient(
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)
+	),
+	url("img/bg4.png");
+}
+
+#group5 {
+	width: 1440px;
+	height: 406px;
+	position: relative;
+}
+
+#group6 {
+	width: 1440px;
+	height: 1205px;
+	position: relative;
+	background-image: url(img/bg6.png);
+}
+
+#group7 {
+	width: 1440px;
+	height: 685px;
+	position: relative;
+}
+
+#group8 {
+	width: 1440px;
+	height: 560px;
+	position: relative;
+}
+
+#group9 {
+	width: 1440px;
+	height: 323px;
+    padding-top: 71px;
+	position: relative;
+	background-color: #483500;
+}
+
+
+
+
+
+
+
+
+
+#logo {
+	position: absolute;
+	/*top: 25px;*/
+	left: 140px;
+	top: -20px;
+	color: white;
+	text-decoration: none;
+	font-family: 'Montserrat';
+	font-size: 24pt;
+}
+
+#more {
+	width: 270px;
+	height: 60px;
+	position: absolute;
+	top: 505px;
+	left: 815px;
+	font-family: 'Montserrat SemiBold';
+	font-size: 28pt;
+	padding-top: 25px;
+	padding-left: 70px;
+}
+
+#apply {
+	width: 469px;
+	height: 80px;
+	position: absolute;
+	top: 893px;
+	left: 810px;
+	font-family: 'Lato Black'
+}
