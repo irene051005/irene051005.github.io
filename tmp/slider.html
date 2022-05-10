@@ -27,43 +27,7 @@
 	    right: 0;
 	}
 	
-	}
   </style>
-
-	<script>
-	let slideIndex = 1;
-	showSlides(slideIndex);
-
-	function nextSlide() {
-	    showSlides(slideIndex += 1);
-	}
-
-	function previousSlide() {
-	    showSlides(slideIndex -= 1);
-	}
-
-	function currentSlide(n) {
-	    showSlides(slideIndex = n);
-	}
-
-	function showSlides(n) {
-	    let slides = document.getElementsByClassName("item");
-
-	    if (n > slides.length) {
-	      slideIndex = 1
-	    } 
-
-	    if (n < 1) {
-	        slideIndex = slides.length
-	    }
-
-	    for (let slide of slides) {
-	        slide.style.display = "none";
-	    }
-
-	    slides[slideIndex - 1].style.display = "block";
-	}
-	</script>
 </head>
 
 <body>
@@ -80,11 +44,60 @@
 	    <img src="../img/7.png">
 	  </div>
 
-	  <a class="previous" onclick="previousSlide()">&#10094;</a>
-	  <a class="next" onclick="nextSlide()">&#10095;</a>
+	  <a id="previousSlideBtn" class="previous">&#10094;</a>
+	  <a id="nextSlideBtn" class="next">&#10095;</a>
 </div>
 
 </body>
+<script>
+
+	let slideIndex = parseInt(localStorage.getItem('slideIndex')) || 1;
+	showSlides(slideIndex);
+
+	function nextSlide() {
+	    showSlides(slideIndex += 1);
+	}
+
+	function previousSlide() {
+	    showSlides(slideIndex -= 1);
+	}
+
+	function currentSlide(n) {
+	    showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	    let slides = document.getElementsByClassName("item");
+	    if (n > slides.length) {
+	      slideIndex = 1
+	    } 
+
+	    if (n < 1) {
+	        slideIndex = slides.length
+	    }
+
+	    for (let slide of slides) {
+	        slide.style.display = "none";
+	    }
+
+	    slides[slideIndex - 1].style.display = "block";
+		localStorage.setItem('slideIndex', slideIndex)
+	}
+</script>
+<script>
+	const previousSlideBtn = document.getElementById('previousSlideBtn')
+	const nextSlideBtn = document.getElementById('nextSlideBtn')
+	previousSlideBtn.addEventListener('click', previousSlide, false)
+	nextSlideBtn.addEventListener('click', nextSlide, false)
+
+	function handleKeyDown(e) {
+		e.code === "ArrowRight" && nextSlide()
+		e.code === "ArrowLeft" && previousSlide()
+
+	}
+	document.addEventListener('keydown', handleKeyDown)
+	
+</script>
 </html>
 
 						
