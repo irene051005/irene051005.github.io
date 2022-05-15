@@ -98,14 +98,6 @@ body {
 	background-color: #483500;
 }
 
-
-
-
-
-
-
-
-
 #logo {
 	position: absolute;
 	/*top: 25px;*/
@@ -136,4 +128,93 @@ body {
 	top: 893px;
 	left: 810px;
 	font-family: 'Lato Black'
+}
+
+.slider {
+	height: 475px;
+	max-width: 725px;
+	position: relative;
+	left: 350px;
+}
+
+.slider .previous, .slider .next {
+	position: absolute;
+	top: 50%;
+	color: white;
+	font-weight: bold;
+	font-size: 32px;
+}
+
+.slider .next {
+	right: -15px;
+}
+
+.slider .previous {
+	left: -30px;
+}
+
+.modal {
+	font-family: 'Montserrat SemiBold';
+	font-size: 30px;
+	color:  #FFBA00;
+   width: 100%;
+   height: 100vh;
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+   background-color: #242424;
+   margin: auto auto;
+   width: 25%;
+   height: 60vh;
+   display: flex;
+   flex-direction: column;
+}
+
+.close {
+   float: right;
+   font-size: 60px;
+   font-weight: bold;
+   margin-left: 210px;
+}
+
+.top_modal {
+   display: flex;
+   flex-direction: raw;
+   margin-bottom: 50px;
+}
+
+.mod_registr {
+   font-size: 30px;
+   text-align: center;
+   padding-top: 20px;
+   padding-left: 37%;
+   color: white;
+}
+
+form {
+   margin: 0 auto;
+}
+
+#modal-submit{
+   margin-left: 180px;
+   width: 100px;
+   height: 40px;
+   font-weight: bold;
+   font-size: 24px;
+}
+
+.form_inside {
+	margin-left: 140px;
+	margin-top: -20px;
+}
+
+.modal_name, .modal_phone, .modal_email {
+	font-size: 24px;
+	width:  440px;
 }
