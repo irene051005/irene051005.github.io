@@ -153,6 +153,11 @@ body {
 	left: -30px;
 }
 
+.item {
+	margin: 0 auto;
+	text-align: center;
+}
+
 .modal {
 	font-family: 'Montserrat SemiBold';
 	font-size: 30px;

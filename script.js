@@ -1,9 +1,20 @@
 let modal = document.getElementById('my_modal');
 let btn = document.getElementById('apply');
 let span = document.getElementsByClassName("close")[0];
+let res = document.getElementById('more');
+
+res.onclick = function() {
+    localStorage.setItem("reg", 0);
+};
 
 btn.onclick = function() {
-    modal.style.display = 'flex';
+    let reg = parseInt(localStorage.getItem("reg")) || 0;
+
+    if (reg == 1) {
+        alert("Запись на мастер класс уже была осуществлена");
+    } else {
+        modal.style.display = 'flex';   
+    } 
 };
 
 span.onclick = function() {
@@ -34,17 +45,6 @@ inputEmail.addEventListener("input", function() {
 });
 
 function saveRegistration() {
-    let registerLink = document.getElementById('registerLink');
-    let name = document.getElementById('signUpUsername').value;
-
-    registerLink.text = name;
-    console.log(name);
-
-    let signInLink = document.getElementById('signInLink');
-    let email = document.getElementById('email_link').value;
-
-    signInLink.text = email;
-    console.log(email);
-
+    localStorage.setItem("reg", 1);
     modal.style.display = 'none';
 }
